@@ -1,11 +1,11 @@
 library(tidyverse)
 library(rtweet)
 
-appname <- "Nike_Tweets_Analysis" # name of application
-key <- "hIE9CVVsHFsGPWHsvjj9vc52X" # your api application key
-secret <- "I3CvypiOgfyjck9DDn0RsOKvJAUveAS3krFOK9ShLscd4iVie1" # api secret
-at <- "2183834275-Tdz35pNu5m4SLJDLeqSQgLNixCGbnGpwTWYprV7" #access token
-as <- "2ymbDG538YprpMCQgoRJQYo1xLIydZixEAABlze7YFNEV" # access secret
+appname <- "XXXX" # name of application
+key <- "XXXX" # your api application key
+secret <- "XXXX" # api secret
+at <- "XXXX-XXXX" #access token
+as <- "XXXX" # access secret
 
 twitter_token <- rtweet::create_token(
   app = appname,
