@@ -16,5 +16,19 @@ twitter_token <- rtweet::create_token(
 
 
 
-horse_tweets <- search_tweets(q = "競馬", n = 200) #テキストに"競馬"を含むツイートを20,000個抽出
-horse_tweets$text
+horse_tweets <- search_tweets(q = "競馬", n = 200) #テキストに"競馬"を含むツイートを200個抽出
+
+
+dim(horse_tweets)
+View(head(horse_tweets))
+horse_tweets = as.data.frame(horse_tweets)
+str(horse_tweets)
+
+table(str_sub(as.character(horse_tweets$created_at), 12, 16))
+
+horse_names = c("リスグラシュー", "キセキ")
+horse_tweets = list()
+for (i in 1:2){
+  horse_name = horse_names[[i]]
+  horse_tweets[[i]] <- search_tweets(q = as.character(horse_name), n = 100) 
+}
